@@ -35,7 +35,8 @@
 (define-public llvm
   (package
     (name "llvm")
-    (version "3.6.2")
+    (version "3.8.0")
+    ;;(version "3.6.2")
     (source
      (origin
       (method url-fetch)
@@ -43,7 +44,9 @@
                           version "/llvm-" version ".src.tar.xz"))
       (sha256
        (base32
-        "153vcvj8gvgwakzr4j0kndc0b7wn91c2g1vy2vg24s6spxcc23gn"))))
+        "0ikfq0gxac8xpvxj23l4hk8f12ydx48fljgrz1gl9xp0ks704nsm"
+        ;;"153vcvj8gvgwakzr4j0kndc0b7wn91c2g1vy2vg24s6spxcc23gn"
+        ))))
     (build-system cmake-build-system)
     (native-inputs
      `(("python" ,python-wrapper)
